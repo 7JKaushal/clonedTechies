@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container-fluid bg-dark pb-1">
+		<nav class="shadow p-3 mb-5 navbar navbar-expand-lg ">
+			<a class="navbar-brand" href="#">
+				<svg class="bi bi-exclude" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M1.5 0A1.5 1.5 0 0 0 0 1.5v9A1.5 1.5 0 0 0 1.5 12H4v2.5A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4H12V1.5A1.5 1.5 0 0 0 10.5 0h-9zM12 4H5.5A1.5 1.5 0 0 0 4 5.5V12h6.5a1.5 1.5 0 0 0 1.5-1.5V4z"/>
+				</svg>
+				<span class="font-weight-bold">Chad Website</span>
+			</a>
+
+			<button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id='navbarNav'>
+				<ul class="nav navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class='nav-link' href="./degreeRegistration.html">Register</a>
+					</li>
+					<li class="nav-item active">
+						<a class='nav-link' href="">ME</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Click Me Plox!
+						</a>
+						<div class="dropdown-menu" aria-labelledby='navbarDropdown'>
+							<a class="dropdown-item" href="#">
+							Using every</a>
+							<a class="dropdown-item" href="#">Bootstrap component</a>
+							<a class="dropdown-item" href="#">I available</a>
+						</div>
+					</li>
+					<form class="form-inline my-2 my-lg-0">
+						<input class='form-control mr-sm-2' type="search" placeholder='nothing happens :(' aria-label='Search'>
+						<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+							Click!
+						</button>
+					</form>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container mt-4">
+			<div class="alert alert-success alert-dismissable fade show" role='alert'>
+				<button class="close" type="button" data-dismiss='alert' aria-label='Close'>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="display-4 font-weight-bold text-center">bootstrap</div>
+				<div>I don't know why i thought Bootstrap is hard lulz</div>
+				<hr>
+				<div class="text-center">Chad text</div>
+			</div>
+		</div>
+
+		<div class="badge-example p-2">
+			<div class="text-center">
+				<h4 class="text-white">I am trying to apply every 
+					<span class='badge badge-light display-3 font-weight-bold'>Bootstrap Componenet</span>
+					by making this simple front-end pages.
+				</h3>
+			</div>
+		</div>
+
+		<div class="container cards-example py-2">
+			<div class="card-deck">
+				<div class="card">
+					<img class="card-img-top" src='http://www.gpmumbai.ac.in/images/img09.jpg' alt='GPM'>
+					<div class="card-body">
+						<h4 class="card-title"> Government Polytechnic, Mumbai </h4>
+						<p class="card-text"> I spent three years of my life here.</p>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted"> sometimes i regret this.</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src='http://www.gpmumbai.ac.in/images/img09.jpg' alt='GPM'>
+					<div class="card-body">
+						<h4 class="card-title"> Computer Department, GPM </h4>
+						<p class="card-text">I learnt almost everything by myself.</p>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted"> with the help of internet of course</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container listGroup-example">
+			<ul class="list-group">
+				<li class="list-group-item active">Help me with these issues: </li>
+				<li class="list-group-item">Position of navbar(i wish it was right) in <code>aboutUs.html</code></li>
+				<li class="list-group-item">Radio buttons aren't flagged as invalid in 	<code>index.html</code></li>
+				<li class="list-group-item">Problem with YT-table margins in <code>degreeRegistration.html</code></li>
+				<li class="list-group-item">size and position of three register buttons is uneven when screen size is small, in<code>index.html</code></li>
+				<li class="list-group-item">I'll add whatever I am unable to do here<code>please help</code></li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<div class="text-center full-masti">
+			<p class="text-white text-center">Full Masti Area ;)</p>
+			<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-secondary" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-success" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-info" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+			<div class="spinner-grow text-light" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-border text-dark" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+
+			<div class="spinner-grow text-dark" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
+

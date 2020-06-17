@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Degree Registration</title>
+
+	<script defer type="text/javascript" src="./degreeRegistration.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<div class="container-fluid bg-dark p-2">
+		
+		<nav class="nav nav-tabs nav-justified bg-dark">
+			<a class='nav-item nav-link' href="http://gpmumbai.ac.in/" target="_blank">
+				<img src="F:\Kaushal\Study\Projects\GPM Techies Clone\src\GPM.png" alt="GPM Logo" width="50px" height="50px">
+			</a>
+			<a class='nav-item nav-link' href="https://msbte.org.in/" target="_blank">
+				<img src="F:\Kaushal\Study\Projects\GPM Techies Clone\src\MSBTE.png" alt="GPM Logo" width="50px" height="50px">
+			</a>
+			<a class="nav-item nav-link" href="./index.html">Home</a>
+			<a class="nav-item nav-link active" href="#registration">Register</a>
+			<a class="nav-item nav-link" href="./aboutUs.html">About Us</a>
+		</nav>
+
+		<div class="display-4 text-center text-white font-weight-bold">Register Here</div>
+
+		<form class="p-4 needs-validation" novalidate id='form' style="width: 700px; margin: auto;">
+
+			<div class="display-6 font-weight-bold" style="color: red">All feilds are mandatory *</div>
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for='year'>Please Select a Year:</label>
+				<select class="custom-select custom-select-sm mb-2" id='year' required>
+					<option selected disabled value="">Choose...</option>
+					<option value="First Year">First Year</option>
+					<option value="Second Year">Second Year</option>
+					<option value="Third Year">Third Year</option>
+				</select>
+				<div class="invalid-tooltip">
+					Please provide your Year.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for='department'>Please Select a Department:</label>
+				<select class="custom-select custom-select-sm" id='department' onchange="other_department()" required>
+					<option selected disabled value="">Choose...</option>
+					<option value="Computer">Computer</option>
+					<option value="Electrical">Electrical</option>
+					<option value="Mechanical">Mechanical</option>
+					<option value="Rubber">Rubber</option>
+					<option value="Civil">Civil</option>
+					<option value="Other">Other</option>
+				</select>
+				<div id='invisible' style="display: none;">
+					<label class='display-6 text-white py-1' for="other-department">Enetr Your Department Name:</label>
+					<input type="text" class='form-control' id='other-department' name="Other Department">
+				</div>
+				<div class="invalid-tooltip">
+					Please provide your Department.
+				</div>
+			</div>
+			
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for="project-title">Project Title:</label>
+				<input type="text" class='form-control' id='project-title' name="Project Title" required>
+				<div class="invalid-tooltip">
+					Please provide your Project Title.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for="project-description">Project Description:</label>
+				<textarea class="form-control" id="project-description" rows="3" required></textarea>
+				<small id="project-description-help" class="form-text text-muted text">
+					Description must be in english 100 - 300 characters long. 
+				</small>
+				<div class="invalid-tooltip">
+					Please provide your Project Description.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for="institute-name">Institute Name:</label>
+				<input type="text" class='form-control' id='institute-name' name="Institute Name" required>
+				<div class="invalid-tooltip">
+					Please provide your Institute'sName.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for="group-leader">Group Leader's Name:</label>
+				<input type="text" class='form-control' id='group-leader-name' name="Group Leader" required>
+				<div class="invalid-tooltip">
+					Please provide your Group Leader's Name.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<label class='display-6 text-white py-1' for="group-leadermail">Group Leader's E-Mail id:</label>
+				<input type="email" class='form-control' id='group-leader-mail' name="E-Mail ID of Second Participant:" required>
+				<div class="invalid-tooltip">
+					Please provide your Group Leader's E-Mail id.
+				</div>
+			</div>
+
+			<div class="form-group position-relative text-center border border-white rounded m-5">
+				<h4 class="display-6 text-white py-1">Select Number of Participants:</h4>
+				<div class="form-check form-check-lg">
+					<div class="custom-control custom-radio custom-control-inline" onclick="two_members()">
+						<input type="radio" id="two" name="number-of-participants" value="Two" class="custom-control-input">
+						<label class="custom-control-label display-6 text-white py-1" for="two">Two</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline" onclick="three_members()">
+						<input type="radio" id="three" name="number-of-participants" value="Three" class="custom-control-input">
+						<label class="custom-control-label display-6 text-white py-1" for="three">Three</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline" onclick="four_members()">
+						<input type="radio" id="four" name="number-of-participants" value="Four" class="custom-control-input">
+						<label class="custom-control-label display-6 text-white py-1" for="four">Four</label>
+					</div>
+
+					<div class="custom-control custom-radio custom-control-inline" onclick="five_members()">
+						<input type="radio" id="five" name="number-of-participants" value='Five' class="custom-control-input">
+						<label class="custom-control-label display-6 text-white py-1" for="five">Five</label>
+					</div>
+				</div>
+
+				<div class="invalid-tooltip">
+					Please provide your number of participants.
+				</div>
+			</div>
+
+			<div class="form-group position-relative">
+				<div class="row p-1" id='first_row'>
+					<div class="col">
+						<label class='display-6 text-white py-1' for="member-two-name">Name of Second Participant:</label>
+						<input type="text" class='form-control' id='member-two-name' name="Name of Second Participant:" required>
+						<div class="invalid-tooltip">
+							Please provide name of the second participant.
+						</div>
+					</div>
+					<div class="col">
+						<label class='display-6 text-white py-1' for="member-two-mail">E-Mail ID of Second Participant:</label>
+						<input type="email" class='form-control' id='member-two-mail' name="E-Mail ID of Second Participant:" required>
+						<div class="invalid-tooltip">
+							Please provide E-mail ID of second Participant.
+						</div>
+					</div>
+				</div>
+				<div class="row p-1" id='second_row'>
+					<div class="col" id='third_name' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-three-name">Name of Third Participant:</label>
+						<input type="text" class='form-control' id='member-three-name' name="Name of Third Participant:" disabled>
+						<div class="invalid-tooltip">
+							Please provide E-mail ID of second Participant.
+						</div>
+					</div>
+					<div class="col" id='third_mail' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-three-mail">E-Mail ID of Third Participant:</label>
+						<input type="email" class='form-control' id='member-three-mail' name="E-Mail ID of Third Participant:" disabled>
+					</div>
+				</div>
+				<div class="row p-1" id='third_row'>
+					<div class="col" id='four_name' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-four-name">Name of Fourth Participant:</label>
+						<input type="text" class='form-control' id='member-four-name' name="Name of Fourth Participant:" disabled>
+						<div class="invalid-tooltip">
+							Please provide E-mail ID of second Participant.
+						</div>
+					</div>
+					<div class="col" id='four_mail' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-four-mail">E-Mail ID of Fourth Participant:</label>
+						<input type="email" class='form-control' id='member-four-mail' name="E-Mail ID of Fourth Participant:" disabled>
+					</div>
+				</div>
+				<div class="row p-1">
+					<div class="col" id='five_name' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-five-name">Name of Fifth Participant:</label>
+						<input type="text" class='form-control' id='member-five-name' name="Name of Fifth Participant:" disabled>
+						<div class="invalid-tooltip">
+							Please provide E-mail ID of second Participant.
+						</div>
+					</div>
+					<div class="col" id='five_mail' style="display: none;">
+						<label class='display-6 text-white py-1' for="member-five-mail">E-Mail ID of Fifth Participant:</label>
+						<input type="email" class='form-control' id='member-five-mail' name="E-Mail ID of Fifth Participant:" disabled>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="form-group position-relative">
+				<div class="form-check">
+					<input class="form-check-input" id='terms-conditions' type="checkbox" name="terms-conditions" value="Agreed">
+					<label class='form-check-label display-6 text-white py-1' for="terms-conditions">
+						I accept the <a href="#Modal" class="text-danger">terms and conditons</a>
+					</label>
+					<div class="invalid-tooltip">
+						You can't go further without accepting terms and conditions.
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-light btn-lg btn-block" onclick="submit_button()">Submit</button>
+			</div>
+
+			<div class="modal fade" id="Modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Terms & Conditions</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="display-6">
+								<p>
+									1. the video submitted is created by me and my team members and its contents are related to the respective project topic only.
+								</p>
+								<p>
+									1. the video submitted is created by me and my team members and its contents are related to the respective project topic only.
+								</p>
+								<p>
+									3. the project team shall be solely responsible for any copyright issues.
+								</p>
+								<p>
+									4. Government Polytechnic, Mumbai may use my video for educational purposes.
+								</p>
+								<p>
+									5. The Principal, Government Polytechnic, Mumbai shall be the final decision-making authority.
+								</p>
+								
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</form>
+
+
+
+</div>
+</body>
+</html>
+
